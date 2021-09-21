@@ -1,0 +1,27 @@
+ALGORITHM algo
+VAR
+    input : STRING
+    sentenceLength,vowelCount : INTEGER
+    wordNumber:INTEGER := 1
+BEGIN
+    Read(input);
+    sentenceLength := input.length;
+
+    FOR i FROM 0 TO sentenceLength - 1  DO  
+
+        IF (input[i] == " ") THEN
+            wordNumber++;
+        END_IF
+
+        IF(input[i] == 'a' || input[i] == 'e' || input[i] == 'i' || input[i] == 'o' || input[i] == 'u')
+            vowelCount++;
+        END_IF
+
+    END_FOR
+
+    Write(sentenceLength)
+    Write(wordNumber)
+    Write(vowelCount)
+END
+
+
